@@ -51,10 +51,6 @@ module OmniAuth
         @raw_info ||= access_token.get('me').parsed
       end
 
-      # Workaround for for https://github.com/intridea/omniauth-oauth2/issues/28
-      def callback_url
-        full_host + script_name + callback_path + query_string
-      end
     end
   end
 end
